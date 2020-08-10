@@ -1,0 +1,27 @@
+spring:
+  jackson:
+    serialization:
+      wrap-root-value: true
+    deserialization:
+      unwrap-root-value: true
+  profiles:
+    active: development
+  http:
+    log-request-details: true
+server:
+  address: 127.0.0.1
+  port: 45091
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-type: PKCS12
+    key-store-password: family
+    key-alias: family
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        security: info
+        web: info
+        websocket: info
+      apache: info
